@@ -304,20 +304,12 @@ return [
             'composerName' => 'dmitryd/typo3-realurl',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/realurl/',
-            'suggestions' => [
-                'static_info_tables',
-            ],
+            'suggestions' => [],
         ],
         'realurl_404_multilingual' => [
             'composerName' => 'realurl_404_multilingual',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/realurl_404_multilingual/',
-            'suggestions' => [],
-        ],
-        'seo_basics' => [
-            'composerName' => 'b13/seo_basics',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/seo_basics/',
             'suggestions' => [],
         ],
         'go_maps_ext' => [
@@ -344,16 +336,16 @@ return [
             'packagePath' => 'typo3conf/ext/pxa_newsletter_subscription/',
             'suggestions' => [],
         ],
+        'seo_basics' => [
+            'composerName' => 'b13/seo_basics',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/seo_basics/',
+            'suggestions' => [],
+        ],
         'solr' => [
             'composerName' => 'apache-solr-for-typo3/solr',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/solr/',
-            'suggestions' => [],
-        ],
-        'yaml_parser' => [
-            'composerName' => 'typo3-ter/yaml-parser',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/yaml_parser/',
             'suggestions' => [],
         ],
         'adodb' => [

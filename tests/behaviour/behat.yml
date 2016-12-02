@@ -1,0 +1,47 @@
+default:
+  autoload:
+    '': %paths.base%/features/bootstrap
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://local.t3kit.wehost.asia/
+      default_session: selenium2
+      files_path: features/Resources
+      show_cmd: 'open %s'
+      selenium2:
+        browser: chrome
+        wd_host: http://dockerhost:4444/wd/hub
+
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: uat-report
+      print_args: true
+      print_outp: true
+      loop_break: true
+  formatters:
+    pretty: true
+    junit:
+      output_path: ./build/logs
+    html:
+      output_path: ./build/logs
+
+  suites:
+    default:
+      paths: &featurePaths
+        - '%paths.base%/features'
+      contexts: &contexts
+        - FeatureContext
+        - XmlContext
+        - ResponsiveContext:
+            screenSizes:
+              desktop:
+                width: 1200
+                height: 1400
+              tablet:
+                width: 785
+                height: 1024
+              mobile:
+                width: 320
+                height: 1024
+      filters:
+        tags: ~@skip

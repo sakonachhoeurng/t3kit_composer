@@ -30,6 +30,9 @@
     }
   ],
   "minimum-stability": "dev",
+  "config": {
+    "bin-dir": "bin"
+  },
   "require": {
     "php": ">=5.5, <7.1",
     "typo3/cms": "^7.6",
@@ -49,7 +52,14 @@
     "t3kit/theme-t3kit": "dev-master",
     "t3kit/theme-t3kit-bluemountain": "dev-master",
     "pixelant/pxa-form-enhancement": "^1.0",
-    "pixelant/pxa-newsletter-subscription": "dev-master"
+    "pixelant/pxa-newsletter-subscription": "dev-master",
+    "lauri/dockert3kit": "~2.2.2",
+
+    "behat/behat": "~3.0@dev",
+    "behat/mink-extension": "~2.0@dev",
+    "behat/mink-selenium2-driver": "~1.2@dev",
+    "emuse/behat-html-formatter": "dev-master",
+    "guzzlehttp/guzzle": "~6.2.1"
   },
   "extra": {
     "typo3/cms": {
